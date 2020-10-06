@@ -1,147 +1,248 @@
 <div fxLayout="column" class="all" fxLayoutAlign="center center">
-  <div class="page">
-    <div class="body" fxLayout="row" fxLayoutAlign="space-between stretch" fxLayoutGap="16px" fxLayout.xs="column">
-      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="16px" fxLayout.xs="column">
-        <img src="assets/picture.png" class="picture">
-        <div fxLayout="column" fxLayoutAlign.xs="center center" fxLayoutGap="16px">
-          <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="8px">
-            <div class="name">ZACHARIE</div>
-            <div class="name">MÉNÉTRIER</div>
-          </div>
-          <div class="title">Full Stack Web Developer</div>
+
+  <div class="head" fxLayout="row" fxLayoutAlign="space-between stretch" fxLayoutGap="16px" fxLayout.xs="column">
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="16px" fxLayout.xs="column">
+      <img src="assets/picture.png" class="picture">
+      <div fxLayout="column" fxLayoutAlign.xs="center center" fxLayoutGap="16px">
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="8px">
+          <div class="name">ZACHARIE</div>
+          <div class="name">MÉNÉTRIER</div>
         </div>
-      </div>
-      <div fxLayout="column" fxLayoutAlign="space-between end" fxLayoutAlign.xs="center center" fxLayoutGap.xs="8px">
-        <div class="details" fxLayoutGap="4px" fxLayout="row"><div>Umeå, Sweden</div><mat-icon>room</mat-icon></div>
-        <div class="details" fxLayoutGap="4px" fxLayout="row"><div>(+33) 637 214 077</div><mat-icon>smartphone</mat-icon></div>
-        <div class="details" fxLayoutGap="4px" fxLayout="row"><div>zacharie.menetrier@gmail.com</div><mat-icon>email</mat-icon></div>
+        <div class="title">Full Stack Web Developer</div>
       </div>
     </div>
+    <div fxLayout="column" fxLayoutAlign="space-between end" fxLayoutGap="8px">
+      <div style="height: 32px; width: 32px;" fxShow fxHide.xs></div>
+      <div class="details" fxLayoutGap="4px" fxLayout="row" fxLayoutAlign="center center"><div>Umeå, Sweden</div><mat-icon>room</mat-icon></div>
+      <div class="details" fxLayoutGap="4px" fxLayout="row" fxLayoutAlign="center center"><div>(+33) 637 214 077</div><mat-icon>smartphone</mat-icon></div>
+      <div class="details" fxLayoutGap="4px" fxLayout="row" fxLayoutAlign="center center"><div>zacharie.menetrier@gmail.com</div><mat-icon>email</mat-icon></div>
+    </div>
+  </div>
+  
+  <div class="banner" *ngIf="language=='en'">
+    28 years old French 🇫🇷 developer with a professional level of English 🇬🇧 and learning Swedish 🇸🇪
+  </div>
+
+  <div class="banner" *ngIf="language=='fr'">
+    Programmeur français 🇫🇷 de 28 ans, avec un niveau d'anglais professionel 🇬🇧
+  </div>
+  
+  
+  <div class="page">
     
-    <div class="banner">
-      28-year-old French 🇫🇷 developer who speaks fluent English 🇬🇧 and learns Swedish 🇸🇪
-    </div>
+    
+    
     
     <div class="content body" fxLayout="row" fxLayout.xs="column" fxLayoutGap="32px">
-      <div class="panel" fxFlex="50" fxLayout="column" fxLayoutGap="16px" FxLayoutAlign="start start">
+      <div class="panel" fxFlex="50" fxLayout="column" fxLayoutGap="32px" FxLayoutAlign="start start">
         
         <div class="about">
-          Full stack web developer with an associate’s degree in computer science and a master’s degree in bioinformatics. I'm passionate about web apps, video game development, design and deep learning.
+          <ng-container *ngIf="language=='en'">
+            Full stack web developer with an associate’s degree in computer science and a master’s degree in bioinformatics. I'm passionate about web apps, video game development, design and deep learning.
+          </ng-container>
+          <ng-container *ngIf="language=='fr'">
+            Programmeur web full stack, diplôme technique en informatique et master en bioinformatique.Je suis passionné par les applis web, le développement de jeux vidéos, le design et le deep learning.
+          </ng-container>
+          
         </div>
         
-        <mat-card class="card topic" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px"><mat-icon>laptop</mat-icon><div>EXPERIENCES</div></mat-card>
-        
-        <mat-card class="experience card">
-          <div class="title">
-            <b>FREELANCING</b> / 2020 - PARIS
-          </div>
-          <div class="text">
-            Independent since 2020, I suceeded to settle down in Sweden. My next achievement: to work for a Swedish company!
-          </div>
-        </mat-card>
-        
-        <mat-card class="experience card">
-          <div class="title">
-            <b>WEZEN</b> / 2019 - 2020 - PARIS
-          </div>
-          <div class="text">
-            Full stack development of a complete set of web applications making use of cutting-edge technologies and innovative programming. 
-          </div>
-        </mat-card>
-        
-        <mat-card class="experience card">
-          <div class="title">
-            <b>TAGC</b> / 2018 - MARSEILLE
-          </div>
-          <div class="text">
-            From scratch coding of a deep learning Python library on Keras for predicting genetic perturbations of individuals.
-          </div>
-        </mat-card>
-        
-        <mat-card class="experience card">
-          <div class="title">
-            <b>TAGC</b> / 2017 - MARSEILLE
-          </div>
-          <div class="text">
-            Integral development of a complete R package for helping researchers in the analysis of genomic data.
-          </div>
-        </mat-card>
-        
-        <mat-card class="experience card">
-          <div class="title">
-            <b>CNRS</b> / 2012 - MARSEILLE
-          </div>
-          <div class="text">
-            Kickstarting a visual programming tool in Java, facilitating computer analysis of real time data for researchers.
-          </div>
-        </mat-card>
-        
-        <mat-card class="experience card">
-          <div class="title">
-            <b>CNRS</b> / 2011 - MARSEILLE
-          </div>
-          <div class="text">
-            Full stack development of a complete set of web applications making use of cutting-edge technologies and innovative programming. 
-          </div>
-        </mat-card>
-        
+        <div fxLayout="column" fxLayoutGap="16px">
+          
+          <mat-card class="card topic" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px"><mat-icon>laptop</mat-icon><div>EXPERIENCES</div></mat-card>
+          
+          <mat-card class="experience card">
+            <div class="title">
+              <b>FREELANCING</b> / 2020 - PARIS
+            </div>
+            <div class="text">
+              <ng-container *ngIf="language=='en'">
+                Independent since 2020, I suceeded to settle down in Sweden. My next achievement: to work for a Swedish company!
+              </ng-container>
+              <ng-container *ngIf="language=='fr'">
+                Indépendant depuis 2020, j'ai réussi à m'installer en Suède. Ma prochaine réalisation : travailler pour une entreprise suédoise !
+              </ng-container>
+            </div>
+          </mat-card>
+          
+          <mat-card class="experience card">
+            <div class="title">
+              <b>WEZEN</b> / 2019 - 2020 - PARIS
+            </div>
+            <div class="text">
+              <ng-container *ngIf="language=='en'">
+                Full stack development of a complete set of web applications making use of cutting-edge technologies and innovative programming. 
+              </ng-container>
+              <ng-container *ngIf="language=='fr'">
+                Développement full stack d'un ensemble complet d'applications web faisant appel à des technologies de pointe et à une programmation innovante.
+              </ng-container>
+            </div>
+          </mat-card>
+          
+          <mat-card class="experience card">
+            <div class="title">
+              <b>TAGC</b> / 2018 - MARSEILLE
+            </div>
+            <div class="text">
+              <ng-container *ngIf="language=='en'">
+                From scratch coding of a deep learning Python library on Keras for predicting genetic perturbations of individuals.
+              </ng-container>
+              <ng-container *ngIf="language=='fr'">
+                Codage à partir de zéro d'une bibliothèque Python de Deep Learning sur Keras pour la prédiction des perturbations génétiques des individus.
+              </ng-container>
+            </div>
+          </mat-card>
+          
+          <mat-card class="experience card">
+            <div class="title">
+              <b>TAGC</b> / 2017 - MARSEILLE
+            </div>
+            <div class="text">
+              <ng-container *ngIf="language=='en'">
+                Integral development of a complete R package for helping researchers in the analysis of genomic data.
+              </ng-container>
+              <ng-container *ngIf="language=='fr'">
+                Développement intégral d'un package R pour aider les chercheurs dans l'analyse des données génomiques.
+              </ng-container>
+            </div>
+          </mat-card>
+          
+          <mat-card class="experience card">
+            <div class="title">
+              <b>CNRS</b> / 2012 - MARSEILLE
+            </div>
+            <div class="text">
+              <ng-container *ngIf="language=='en'">
+                Kickstarting a visual programming tool in Java, facilitating computer analysis of real time data for researchers.
+              </ng-container>
+              <ng-container *ngIf="language=='fr'">
+                Démarrage d'un outil de programmation visuel en Java, facilitant l'analyse informatique des données en temps réel pour les chercheurs.
+              </ng-container>
+            </div>
+          </mat-card>
+          
+          <mat-card class="experience card">
+            <div class="title">
+              <b>CNRS</b> / 2011 - MARSEILLE
+            </div>
+            <div class="text">
+              <ng-container *ngIf="language=='en'">
+                Internship for the development of a Java computer tool allowing the statistical analysis of real time data.
+              </ng-container>
+              <ng-container *ngIf="language=='fr'">
+                Stage de développement d'un outil informatique Java permettant l'analyse statistique de données en temps réel.
+              </ng-container>
+            </div>
+          </mat-card>
+        </div>
       </div>
       
-      <div class="panel" fxFlex="50" fxLayout="column" fxLayoutGap="16px" FxLayoutAlign="start start">
+      <div class="panel" fxFlex="50" fxLayout="column" fxLayoutGap="32px" FxLayoutAlign="start start">
         
-        <mat-card class="card topic" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px"><mat-icon>school</mat-icon><div>EDUCATION</div></mat-card>
-        
-        <div class="education">
-          <div class="title">
-            <b>Master’s degree</b> - Aix-Marseille University
+        <div fxLayout="column" fxLayoutGap="16px">
+          <mat-card class="card topic" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px"><mat-icon>school</mat-icon><div>EDUCATION</div></mat-card>
+          
+          <div class="education" *ngIf="language=='en'">
+            <div class="title">
+              <b>Master’s degree</b> - Aix-Marseille University
+            </div>
+            <div class="text">
+              Bioinformatics master's degree obtained with honours. I was trained in statistical analysis and deep learning with Python and R.
+            </div>
           </div>
-          <div class="text">
-            Bioinformatics master's degree obtained with honours. I was trained in statistical analysis and deep learning with Python and R.
+          
+          <div class="education" *ngIf="language=='fr'">
+            <div class="title">
+              <b>Master</b> - Université Aix-Marseille
+            </div>
+            <div class="text">
+              Maîtrise de bioinformatique obtenue avec mention "Très Bien". J'ai été formé à la programmation Python et R mais aussi à l'analyse statistique, au machine learning et au deep learning.
+            </div>
           </div>
+          
+          <div class="education" *ngIf="language=='en'">
+            <div class="title">
+              <b>Bachelor's degree</b> - Aix-Marseille University
+            </div>
+            <div class="text">
+              Bachelor’s degree on biological sciences with initiation to mathematical modeling on R, Fortran and Octave.
+            </div>
+          </div>
+          
+          <div class="education" *ngIf="language=='fr'">
+            <div class="title">
+              <b>Licence</b> - Université Aix-Marseille
+            </div>
+            <div class="text">
+              Licence en sciences biologiques. J'ai pu m'y former à la modélisation mathématique sur R, Fortran et Octave.
+            </div>
+          </div>
+          
+          <div class="education" *ngIf="language=='en'">
+            <div class="title">
+              <b>Associate's degree</b> - IUT2 Grenoble
+            </div>
+            <div class="text">
+              Two years diploma on computer science providing a serious, methodical and low-level programming education.
+            </div>
+          </div>
+          
+          <div class="education" *ngIf="language=='fr'">
+            <div class="title">
+              <b>DUT</b> - IUT2 Grenoble
+            </div>
+            <div class="text">
+              Un diplôme de deux ans entièrement axé sur l'informatique offrant une formation sérieuse, méthodique sur tous les niveaux de programmation.
+            </div>
+          </div>
+          
         </div>
         
-        <div class="education">
-          <div class="title">
-            <b>Bachelor's degree</b> - Aix-Marseille University
-          </div>
-          <div class="text">
-            Bachelor’s degree on biological sciences with initiation to mathematical modeling on R, Fortran and Octave.
-          </div>
+        <div fxLayout="column" fxLayoutGap="16px">
+          
+          <mat-card class="card topic" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px"><mat-icon>emoji_objects</mat-icon><div>SKILLS</div></mat-card>
+          <mat-chip-list [selectable]="'false'">
+            <mat-chip class="chip">Angular</mat-chip>
+            <mat-chip class="chip">Node.js</mat-chip>
+            <mat-chip class="chip">MongoDB</mat-chip>
+            <mat-chip class="chip">Express</mat-chip>
+            <mat-chip>Typescript</mat-chip>
+            <mat-chip>Javascript</mat-chip>
+            <mat-chip>Python</mat-chip>
+            <mat-chip>Django</mat-chip>
+            <mat-chip>MySQL</mat-chip>
+            <mat-chip>Redis</mat-chip>
+            <mat-chip>Java</mat-chip>
+            <mat-chip>Spring</mat-chip>
+            <mat-chip>Vue.js</mat-chip>
+            <mat-chip>Responsive Design</mat-chip>
+            <mat-chip>Wix Corvid</mat-chip>
+            <mat-chip>Web Sockets</mat-chip>
+            <mat-chip>Deep Learning</mat-chip>
+            <mat-chip>Machine Learning</mat-chip>
+          </mat-chip-list>
+          
         </div>
         
-        <div class="education">
-          <div class="title">
-            <b>Associate's degree</b> - IUT2 Grenoble
-          </div>
-          <div class="text">
-            Two years diploma on computer science providing a serious, methodical and low-level programming education.
-          </div>
-        </div>
-        
-        <mat-card class="card topic" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px"><mat-icon>emoji_objects</mat-icon><div>SKILLS</div></mat-card>
-        <mat-chip-list aria-label="Fish selection">
-          <mat-chip>Angular</mat-chip>
-          <mat-chip>Node.js</mat-chip>
-          <mat-chip>Express</mat-chip>
-          <mat-chip>Vue.js</mat-chip>
-          <mat-chip>Spring</mat-chip>
-          <mat-chip>Django</mat-chip>
-          <mat-chip>MongoDB</mat-chip>
-          <mat-chip>MySQL</mat-chip>
-          <mat-chip>Javascript</mat-chip>
-          <mat-chip>Typescript</mat-chip>
-          <mat-chip>Wix Corvid</mat-chip>
-          <mat-chip>Web Sockets</mat-chip>
-          <mat-chip>Deep Learning</mat-chip>
-          <mat-chip>Java</mat-chip>
-        </mat-chip-list>
-        
-        <mat-card class="card">
+        <mat-card class="card" *ngIf="language=='en'">
           Programming has always been part of my life. I always keep learning and stay updated on innovative great concepts.
           <b>Progressive Web Applications, JAM Stack, Functional Programming, Mobile First</b> and <b>Static Site Generators</b> to name a few !
+        </mat-card>
+        
+        <mat-card class="card" *ngIf="language=='fr'">
+          La programmation a toujours fait partie de ma vie. Je continue sans cesse d'apprendre et me tenir au courant des concepts innovants.
+          <b>Progressive Web Applications, JAM Stack, Functional Programming, Mobile First, Static Site Generators</b>, la liste peut continuer !
         </mat-card>
         
       </div>
     </div>
   </div>
 </div>
+
+<mat-card class="languages" fxLayout="row">
+  <div class="language" [ngClass]="{'selected' : language=='en'}" (click)="language = 'en'">
+    🇬🇧
+  </div>
+  <div class="language" [ngClass]="{'selected' : language=='fr'}" (click)="language = 'fr'">
+    🇫🇷
+  </div>
+</mat-card>

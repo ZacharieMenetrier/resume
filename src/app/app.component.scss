@@ -2,6 +2,11 @@
     color: rgb(82, 82, 82);
 }
 
+.head {
+    width: 100%;
+    padding: 32px;
+}
+
 .page {
     max-width: 900px;
     background: white;
@@ -11,12 +16,13 @@
 }
 
 .body {
-    padding: 16px;
+    padding: 32px;
 }
 
 .name {
     font-size: 3em;
     line-height: 1;
+    text-align: center;
 }
 
 .title {
@@ -25,15 +31,17 @@
 
 .picture {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 
 .banner {
     text-align: center;
-    background: #2e9fdeff;
+    background: #67b0e6;
     color: white;
-    padding: 0px 16px;
+    padding: 8px 16px;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
 .card {
@@ -75,3 +83,38 @@
         
     }
 }
+
+.chip {
+    background:#67b0e6;
+    color: white;
+}
+
+.chip:hover {
+    color: white;
+}
+
+.languages {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 16px;
+    padding: 0;
+    background-color: #e0e0e0;
+
+    .language {
+        font-size: 2em;
+        padding: 8px;
+        border-radius: 2px;
+        opacity: 0.5;
+    }
+
+    .language:hover {
+        cursor: pointer;
+    }
+
+    .selected {
+        opacity: 1;
+        background-color: white;
+    }
+}
+
